@@ -6,6 +6,9 @@ jobs:
     name: A job to say hello
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          ref: ${{ github.event.inputs.checkoutRef }}
       - id: foo
         uses: actions/build_workflows_test@v1
         with:
