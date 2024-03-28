@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: foo
-        uses: actions/build_workflows_test@v1
+        uses: actions/build_workflows_test/action.yml@v1
         with:
           who-to-greet: 'ai đó cũng được'
       - run: echo random-number "$RANDOM_NUMBER"
