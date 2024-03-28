@@ -10,6 +10,7 @@ jobs:
         uses: actions/build_workflows_test/action.yml@v1
         with:
           who-to-greet: 'ai đó cũng được'
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       - run: echo random-number "$RANDOM_NUMBER"
         shell: bash
         env:
